@@ -10,6 +10,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch.actions import RegisterEventHandler
 
 
 def generate_launch_description():
@@ -48,3 +49,7 @@ def generate_launch_description():
             cmd=['rviz2', '-d', rviz_config_path],
             output='screen'),
     ])
+    
+    
+    
+    
