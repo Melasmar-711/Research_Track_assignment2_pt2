@@ -1,6 +1,6 @@
 # **Research Track Assignment 2 part 2**
 
-* this repositry simply utilizes a ros2 publisher to move a robot in a simulation environment with a simple GUI
+* this repository simply utilizes a ros2 publisher to move a robot in a simulation environment with a simple GUI
 
 
 <br/>
