@@ -52,4 +52,4 @@
 [![Video Thumbnail](https://img.youtube.com/vi/_7aJQuSJX6o/0.jpg)](https://youtu.be/_7aJQuSJX6o)
 
 **second i made the robot move like turtlesim excercise**
-[![Video Thumbnail](https://img.youtube.com/vi/aCeZPeVQP3E/0.jpg)](https://youtu.be/aCeZPeVQP3E)
+[![turtle like behavior](https://img.youtube.com/vi/iiN9Wq33p38/0.jpg)](https://youtu.be/iiN9Wq33p38)
