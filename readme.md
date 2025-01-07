@@ -48,8 +48,9 @@
 ## Simulation Output
 <br/>
 
-**first approach implement was just a simple publisher with a gui**
+**First approach implemented was just a simple publisher with a GUI**  
 [![Video Thumbnail](https://img.youtube.com/vi/_7aJQuSJX6o/0.jpg)](https://youtu.be/_7aJQuSJX6o)
 
-**second i made the robot move like turtlesim excercise**
-[![turtle like behavior](https://img.youtube.com/vi/iiN9Wq33p38/0.jpg)](https://youtu.be/iiN9Wq33p38)
+**Second, I made the robot move like turtlesim exercise**  
+[![Video Thumbnail](https://img.youtube.com/vi/iiN9Wq33p38/0.jpg)](https://youtu.be/iiN9Wq33p38)
+
