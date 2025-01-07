@@ -19,7 +19,7 @@ class TurtlePatternNode(Node):
         super().__init__('moving_robot_node')
         self.pub = self.create_publisher(Twist, 'cmd_vel', 10)
         self.sub = self.create_subscription(Odometry, '/odom', pose_callback, 10)
-        self.timer = self.create_timer(0.1, self.move_turtle)
+        self.timer = self.create_timer(0.1, self.move_robot)
         self.vel_msg = Twist()
         self.forward_speed = 1.0
         self.turn_speed = 1.0
@@ -27,7 +27,7 @@ class TurtlePatternNode(Node):
         self.min_x = 2
         self.moving_up = True
 
-    def move_turtle(self):
+    def move_robot(self):
         # Move forward horizontally
         self.vel_msg.linear.x = self.forward_speed
         self.vel_msg.angular.z = 0.0
