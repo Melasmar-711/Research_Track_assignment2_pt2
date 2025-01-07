@@ -15,6 +15,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/launch_sim.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/launch_the_correct_sim.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

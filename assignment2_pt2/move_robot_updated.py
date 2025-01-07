@@ -2,22 +2,23 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
+from nav_msgs.msg import Odometry
 import math
 
 # Global variable to store turtle's position
-turtle_x = 0.0
+robot_x = 0.0
 
 # Callback function to update turtle's position
 def pose_callback(msg):
-    global turtle_x
-    turtle_x = msg.x
-    print(turtle_x)
+    global robot_x
+    robot_x = msg.pose.pose.position.x
+    print(robot_x)
 
 class TurtlePatternNode(Node):
     def __init__(self):
-        super().__init__('turtle_pattern_node')
-        self.pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-        self.sub = self.create_subscription(Pose, '/turtle1/pose', pose_callback, 10)
+        super().__init__('moving_robot_node')
+        self.pub = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.sub = self.create_subscription(Odometry, '/odom', pose_callback, 10)
         self.timer = self.create_timer(0.1, self.move_turtle)
         self.vel_msg = Twist()
         self.forward_speed = 1.0
@@ -33,10 +34,10 @@ class TurtlePatternNode(Node):
         self.pub.publish(self.vel_msg)
 
         # Check if the turtle has reached the edge
-        if  turtle_x >= self.max_x:
+        if  robot_x >= self.max_x:
             self.moving_up = False
             self.vel_msg.angular.z = self.turn_speed
-        elif turtle_x <= self.min_x:
+        elif robot_x <= self.min_x:
             self.moving_up = True
             self.vel_msg.angular.z = -1.0*self.turn_speed
         else:
