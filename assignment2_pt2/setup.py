@@ -8,6 +8,7 @@ setup(
     packages=[package_name],
     py_modules=[
    'move_robot',
+   'move_robot_updated',
     ],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -24,7 +25,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'move_robot=move_robot:main'
+        'move_robot=move_robot:main',
+        'move_robot_updated=move_robot_updated:main'
         ],
     },
 )
