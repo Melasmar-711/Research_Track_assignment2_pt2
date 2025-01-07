@@ -16,10 +16,17 @@
 ### **Nodes**
 1. **move_robot node** 
 - this node is a simple publisher that can publish vel_x ang_vel_z speeds to the robot
-- implements a simple tkinter GUI for better ability to publish speeds because when running a launch file the gui in the terminal is very ambigious 
-
+- implements a simple tkinter GUI for better ability to publish speeds because when running a launch file the gui in the terminal is very ambigious
+ 
 2. **launch_sim.launch.py**
 - this launch file launches the gazebo.launch.py file from the robot_urdf package and the python node created in the assignment2_pt2 package in order to run the entire simulation
+
+---
+3. **move_robot_updated node** 
+- this implements the same behaviour as the first turtlesim excercies we did.
+
+4. **launch_the_correct_sim.launch**
+- this launches the simulation with the inteded updated behaviour. 
 ---
 ## **Installation and running**
 - **Dependencies:**
@@ -35,10 +42,14 @@
   	git clone https://github.com/Melasmar-711/Research_Track_assignment2_pt2.git
   	cd ..
   	colcon build
-  	ros2 launch assignment2_pt2 launch_sim.launch.py
+  - for the first behaviour implemented use `ros2 launch assignment2_pt2 launch_sim.launch.py`
+  - for the second behavior use `ros2 launch assignment2_pt2 launch_the_correct_sim.launch.py`
 ---
 ## Simulation Output
 <br/>
 
+**first approach implement was just a simple publisher with a gui**
 [![Video Thumbnail](https://img.youtube.com/vi/_7aJQuSJX6o/0.jpg)](https://youtu.be/_7aJQuSJX6o)
 
+**second i made the robot move like turtlesim excercise**
+[![Video Thumbnail](https://img.youtube.com/vi/aCeZPeVQP3E/0.jpg)](https://youtu.be/aCeZPeVQP3E)
